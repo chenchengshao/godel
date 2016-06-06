@@ -25,7 +25,7 @@
 
   <!-- Bring up simulated robot that can be visualized under the tf namespace 
        Allows for previewing paths generated before execution. -->
-  <include file="$(find industrial_robot_simulator_service)/launch/start_simulation_server.launch" > 
+  <include file="$(find industrial_robot_simulator_service)/launch/start_simulation_server_network.launch" > 
     <arg name="namespace" value="$(arg namespace)"/>
   </include>
   

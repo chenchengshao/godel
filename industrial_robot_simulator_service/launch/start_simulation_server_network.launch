@@ -28,8 +28,8 @@
     <!-- Lets the controller read from the real robot's joint names -->
     <remap from="controller_joint_names" to="/controller_joint_names"/>
 
-    <!-- Launches a robot simulator with associated action server -->
-    <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch"/>
+    <!-- joint_trajectory_action: provides actionlib interface for high-level robot control -->
+    <node pkg="industrial_robot_client" type="joint_trajectory_action" name="joint_trajectory_action"/>
 
     <!-- Launches service interface to the simulator -->
     <node pkg="industrial_robot_simulator_service" type="simulator_service_node" name="simulator_service" output="screen">
